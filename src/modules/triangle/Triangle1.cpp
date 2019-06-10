@@ -101,7 +101,7 @@ void Triangle1::render(){
 	//绑定VAO
 	glBindVertexArray(VAO);
 	//它使用当前激活的着色器，和VBO的顶点数据（通过VAO间接绑定）绘制图元
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	//glDrawArrays(GL_TRIANGLES, 0, 3);
 	//使用当前绑定的索引缓冲对象中的索引进行绘制
 	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 }

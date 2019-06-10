@@ -46,7 +46,7 @@ void MyTexture::init()
 	};
 
 	//创建Shader
-	//shader = Shader("MyTexture");
+	shader = Shader("MyTexture");
 
 	//创建对象
 	glGenVertexArrays(1, &VAO);
