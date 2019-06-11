@@ -31,18 +31,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="src\shader\MyTexture.fs">
-      <Filter>资源文件\纹理</Filter>
-    </None>
-    <None Include="src\shader\MyTexture.vs">
-      <Filter>资源文件\纹理</Filter>
-    </None>
-    <None Include="src\shader\Triangle1.fs">
-      <Filter>资源文件\三角形</Filter>
-    </None>
-    <None Include="src\shader\Triangle1.vs">
-      <Filter>资源文件\三角形</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Shader.cpp">

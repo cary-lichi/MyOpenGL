@@ -152,11 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="src\shader\MyTexture.fs" />
-    <None Include="src\shader\MyTexture.vs" />
     <None Include="packages.config" />
-    <None Include="src\shader\Triangle1.fs" />
-    <None Include="src\shader\Triangle1.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\glad.c" />
