@@ -13,7 +13,7 @@ public:
 	void exit();
 private:
 	int width, height, nrChannels;
-	unsigned int texture;
+	unsigned int textureBg, textureFace;
 	unsigned int VBO, VAO, EBO;
 	Shader shader;
 };

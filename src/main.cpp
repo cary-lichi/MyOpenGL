@@ -2,6 +2,8 @@
 #include "modules/triangle/Triangle.h"
 #include "modules/triangle/Triangle1.h"
 #include "modules/texture/MyTexture.h"
+#include "modules/texture/MyTexture2.h"
+
 Command* command;
 int input=3;
 //bool DEBUG = true;
@@ -12,6 +14,7 @@ void showPptions() {
 	std::cout << "1：彩色三角形" << std::endl;
 	std::cout << "2：时间上线性变色三角形" << std::endl;
 	std::cout << "3：纹理" << std::endl;
+	std::cout << "4：纹理叠加" << std::endl;
 	std::cout << "0：关闭程序" << std::endl;
 }
 void init() {
@@ -24,6 +27,9 @@ void init() {
 			break;
 		case 3:
 			command = new MyTexture();
+			break;
+		case 4:
+			command = new MyTexture2();
 			break;
 	}
 	command->init();
@@ -125,5 +131,6 @@ void framebuffer_size_callback(GLFWwindow * window, int width, int height)
 {
 	glViewport(0, 0, width, height);
 }
+
 
 

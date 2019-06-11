@@ -12,10 +12,11 @@ MyTexture2::~MyTexture2()
 void MyTexture2::init()
 {
 	//加载图片
-	unsigned char* data = stbi_load("resources/textures/container.jpg", &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load("resources/textures/bricks2.jpg", &width, &height, &nrChannels, 0);
 	//创建纹理
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	glGenTextures(1, &textureBg);
+	glBindTexture(GL_TEXTURE_2D, textureBg);
+
 	// 为当前绑定的纹理对象设置环绕、过滤方式
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -32,6 +33,39 @@ void MyTexture2::init()
 	//释放资源
 	stbi_image_free(data);
 
+	//加载图片
+	data = stbi_load("resources/textures/bricks2.jpg", &width, &height, &nrChannels, 0);
+	//创建纹理
+	glGenTextures(1, &textureFace);
+	glBindTexture(GL_TEXTURE_2D, textureFace);
+
+	// 为当前绑定的纹理对象设置环绕、过滤方式
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	
+	if (data) {
+		//生成纹理
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else {
+		std::cout << "加载失败" << std::endl;
+	}
+	//释放资源
+	stbi_image_free(data);
+
+	//glActiveTexture(GL_TEXTURE0);// 在绑定纹理之前先激活纹理单元
+	//glBindTexture(GL_TEXTURE_2D, textureBg);
+
+	//glActiveTexture(GL_TEXTURE1);
+	//glBindTexture(GL_TEXTURE_2D, textureFace);
+
+	shader.use();
+	glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0); // 手动设置
+	shader.setInt("texture2", 1); // 或者使用着色器类设置
+
 	float vertices[] = {
 		//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
 			 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
@@ -46,7 +80,7 @@ void MyTexture2::init()
 	};
 
 	//创建Shader
-	//shader = Shader("MyTexture2");
+	shader = Shader("MyTexture2");
 
 	//创建对象
 	glGenVertexArrays(1, &VAO);
@@ -85,7 +119,12 @@ void MyTexture2::render()
 	//重新渲染
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	glBindTexture(GL_TEXTURE_2D, texture);
+	//glBindTexture(GL_TEXTURE_2D, texture);
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, textureBg);
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, textureFace);
 
 	shader.use();
 

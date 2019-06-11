@@ -73,22 +73,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\C++\LearnOpenGL-master\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\C++\LearnOpenGL-master\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\VS2019\VC\Tools\MSVC\14.21.27702\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\C++\LearnOpenGL-master\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\C++\LearnOpenGL-master\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\C++\LearnOpenGL-master\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\C++\LearnOpenGL-master\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\C++\LearnOpenGL-master\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\C++\LearnOpenGL-master\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
