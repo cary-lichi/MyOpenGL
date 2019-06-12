@@ -93,10 +93,32 @@ void MyTrans::render()
 	//得到矩阵的均匀位置并设置矩阵
 	unsigned int transformLoc = glGetUniformLocation(shader.ID, "transform");
 	glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
-
+	
 	shader.use();
 
 	glBindVertexArray(VAO);
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+	transform = glm::mat4(1.0f); // reset it to identity matrix
+	transform = glm::translate(transform, glm::vec3(-0.5f, 0.5f, 0.0f));
+	double scaleAmount = sin(glfwGetTime());
+	transform = glm::scale(transform, glm::vec3(scaleAmount, scaleAmount, scaleAmount));
+	// 这一次，将矩阵值数组的第一个元素作为其内存指针值
+	glUniformMatrix4fv(transformLoc, 1, GL_FALSE, &transform[0][0]);
+
+	// 现在用新的变换替换均匀矩阵，再画一次。
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+	transform = glm::mat4(1.0f);
+	//旋转
+	transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+	//位移
+	transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+	//缩放
+	transform = glm::scale_slow(transform, glm::vec3(0.5f, 0.5f, 0.5f));
+
+	//得到矩阵的均匀位置并设置矩阵
+	glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	float vertices[] = {
