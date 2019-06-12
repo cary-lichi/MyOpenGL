@@ -1,22 +1,22 @@
-#include "MyTexture2.h"
+#include "MyTexture3.h"
 
-MyTexture2::MyTexture2()
+MyTexture3::MyTexture3()
 {
 }
 
 
-MyTexture2::~MyTexture2()
+MyTexture3::~MyTexture3()
 {
 }
 
-void MyTexture2::init()
+void MyTexture3::init()
 {
 
 	//创建Shader
-	shader = Shader("MyTexture2");
+	shader = Shader("MyTexture3");
 
 	//加载图片
-	unsigned char* data = stbi_load("resources/textures/container.jpg", &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load("resources/textures/bricks2.jpg", &width, &height, &nrChannels, 0);
 	//创建纹理
 	glGenTextures(1, &textureBg);
 	glBindTexture(GL_TEXTURE_2D, textureBg);
@@ -48,8 +48,8 @@ void MyTexture2::init()
 	// 为当前绑定的纹理对象设置环绕、过滤方式
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
 	if (data) {
 		//生成纹理
@@ -63,11 +63,11 @@ void MyTexture2::init()
 	stbi_image_free(data);
 
 	shader.use();
-	glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);  // 手动设置
-	shader.setInt("texture2", 0); // 或者使用着色器类设置
+	shader.setInt("texture1", 0); // 手动设置
+	shader.setInt("texture2", 1); // 或者使用着色器类设置
 }
 
-void MyTexture2::render()
+void MyTexture3::render()
 {
 	//设置背景色
 	glClearColor(0.5f, 0.0f, 0.5f, 1.0f);
@@ -88,10 +88,10 @@ void MyTexture2::render()
 
 	float vertices[] = {
 		//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
-			 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
-			 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // 右下
+			 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   2.0f, 2.0f,   // 右上
+			 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   2.0f, 0.0f,   // 右下
 			-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
-			-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // 左上
+			-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 2.0f    // 左上
 	};
 
 	unsigned int indices[] = {
@@ -131,7 +131,7 @@ void MyTexture2::render()
 	
 }
 
-void MyTexture2::exit()
+void MyTexture3::exit()
 {
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);

@@ -24,6 +24,7 @@ public:
 	void setInt(const std::string& name, int value) const;
 	void setFloat(const std::string& name, float value) const;
 	void setVector3(const std::string& name, float rValue, float gValue, float bValue) const;
+	void setglUniform4f(const std::string& name, float rValue, float gValue, float bValue, float aValue) const;
 	// ≥Ã–ÚID
 	int ID;
 private:

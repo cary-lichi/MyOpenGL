@@ -114,6 +114,13 @@ void Shader::setVector3(const std::string& name, float rValue, float gValue, flo
 
 }
 
+void Shader::setglUniform4f(const std::string& name, float rValue, float gValue, float bValue, float aValue ) const
+{
+	int vertexColorLocation = glGetUniformLocation(ID, name.c_str());
+	glUniform4f(vertexColorLocation, rValue, gValue, bValue, aValue);
+
+}
+
 Shader::~Shader()
 {
 }

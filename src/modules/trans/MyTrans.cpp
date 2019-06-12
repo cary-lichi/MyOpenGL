@@ -1,19 +1,19 @@
-#include "MyTexture2.h"
+#include "MyTrans.h"
 
-MyTexture2::MyTexture2()
+MyTrans::MyTrans()
 {
 }
 
 
-MyTexture2::~MyTexture2()
+MyTrans::~MyTrans()
 {
 }
 
-void MyTexture2::init()
+void MyTrans::init()
 {
 
 	//创建Shader
-	shader = Shader("MyTexture2");
+	shader = Shader("MyTrans");
 
 	//加载图片
 	unsigned char* data = stbi_load("resources/textures/container.jpg", &width, &height, &nrChannels, 0);
@@ -63,11 +63,11 @@ void MyTexture2::init()
 	stbi_image_free(data);
 
 	shader.use();
-	glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);  // 手动设置
-	shader.setInt("texture2", 0); // 或者使用着色器类设置
+	shader.setInt("texture1", 0); // 手动设置
+	shader.setInt("texture2", 1); // 或者使用着色器类设置
 }
 
-void MyTexture2::render()
+void MyTrans::render()
 {
 	//设置背景色
 	glClearColor(0.5f, 0.0f, 0.5f, 1.0f);
@@ -80,6 +80,19 @@ void MyTexture2::render()
 	glBindTexture(GL_TEXTURE_2D, textureBg);
 	glActiveTexture(GL_TEXTURE1);
 	glBindTexture(GL_TEXTURE_2D, textureFace);
+
+	// 创建 单位矩阵
+	glm::mat4 transform = glm::mat4(1.0f); 
+	//位移
+	//transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+	//旋转
+	transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+	//缩放
+	transform = glm::scale_slow(transform, glm::vec3(0.5f, 0.5f, 0.5f));
+
+	//得到矩阵的均匀位置并设置矩阵
+	unsigned int transformLoc = glGetUniformLocation(shader.ID, "transform");
+	glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
 
 	shader.use();
 
@@ -128,10 +141,10 @@ void MyTexture2::render()
 	//glBindBuffer(GL_ARRAY_BUFFER, 0);
 	//glBindVertexArray(0);
 
-	
+
 }
 
-void MyTexture2::exit()
+void MyTrans::exit()
 {
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
