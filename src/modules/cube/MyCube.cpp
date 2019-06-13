@@ -139,5 +139,5 @@ void MyCube::render() {
 }
 
 void MyCube::exit() {
-
+	VO.dispose();
 }

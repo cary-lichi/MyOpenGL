@@ -44,8 +44,10 @@ void init() {
 			break;
 		case 6:
 			command = new MyTrans();
+			break;
 		case 7:
 			command = new MyPlane();
+			break;
 		case 8:
 			command = new MyCube();
 			break;

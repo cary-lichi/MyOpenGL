@@ -59,5 +59,5 @@ void MyPlane::render() {
 }
 
 void MyPlane::exit() {
-
+	VO.dispose();
 }
