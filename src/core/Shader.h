@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iostream>
 #include <string>
+#include <glm/glm.hpp>
 using namespace std;
 
 class Shader
@@ -25,6 +26,7 @@ public:
 	void setFloat(const std::string& name, float value) const;
 	void setVector3(const std::string& name, float rValue, float gValue, float bValue) const;
 	void setglUniform4f(const std::string& name, float rValue, float gValue, float bValue, float aValue) const;
+	void setMat4(const std::string& name, const glm::mat4& mat) const;
 	// ≥Ã–ÚID
 	int ID;
 private:

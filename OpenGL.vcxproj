@@ -159,6 +159,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\modules\plane\MyPlane.cpp" />
     <ClCompile Include="src\modules\cube\MyCube.cpp" />
     <ClCompile Include="src\core\glad.c" />
     <ClCompile Include="src\core\Texture.cpp" />
@@ -175,6 +176,7 @@
     <ClCompile Include="src\utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\modules\plane\MyPlane.h" />
     <ClInclude Include="src\modules\cube\MyCube.h" />
     <ClInclude Include="src\core\Command.h" />
     <ClInclude Include="src\core\include.h" />

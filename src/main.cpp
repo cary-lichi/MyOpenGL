@@ -6,6 +6,7 @@
 #include "modules/texture/MyTexture3.h"
 #include "modules/trans/MyTrans.h"
 #include "modules/cube/MyCube.h"
+#include "modules/plane/MyPlane.h"
 
 Command* command;
 int input=3;
@@ -20,7 +21,8 @@ void showPptions() {
 	std::cout << "4：纹理叠加" << std::endl;
 	std::cout << "5：纹理练习" << std::endl;
 	std::cout << "6：旋转缩放变换" << std::endl;
-	std::cout << "7：正方体" << std::endl;
+	std::cout << "7：平面" << std::endl;
+	std::cout << "8：正方体" << std::endl;
 	std::cout << "0：关闭程序" << std::endl;
 }
 void init() {
@@ -43,6 +45,8 @@ void init() {
 		case 6:
 			command = new MyTrans();
 		case 7:
+			command = new MyPlane();
+		case 8:
 			command = new MyCube();
 			break;
 	}
@@ -62,10 +66,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //输入
 void processInput(GLFWwindow* window);
 int createWindw();
-// settings
-//屏幕大小
-const unsigned int SCR_WIDTH = 1000;
-const unsigned int SCR_HEIGHT = 1000;
+
 bool isClose;
 
 int main()
