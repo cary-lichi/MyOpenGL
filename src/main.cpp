@@ -5,6 +5,7 @@
 #include "modules/texture/MyTexture2.h"
 #include "modules/texture/MyTexture3.h"
 #include "modules/trans/MyTrans.h"
+#include "modules/cube/MyCube.h"
 
 Command* command;
 int input=3;
@@ -19,6 +20,7 @@ void showPptions() {
 	std::cout << "4：纹理叠加" << std::endl;
 	std::cout << "5：纹理练习" << std::endl;
 	std::cout << "6：旋转缩放变换" << std::endl;
+	std::cout << "7：正方体" << std::endl;
 	std::cout << "0：关闭程序" << std::endl;
 }
 void init() {
@@ -40,6 +42,8 @@ void init() {
 			break;
 		case 6:
 			command = new MyTrans();
+		case 7:
+			command = new MyCube();
 			break;
 	}
 	command->init();

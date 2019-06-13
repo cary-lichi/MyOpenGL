@@ -13,7 +13,7 @@ public:
 private:
 	int width, height, nrChannels;
 	unsigned int texture;
-	unsigned int VBO, VAO, EBO;
+	MyShaderVO VO;
 	Shader shader;
 };
 

@@ -1,15 +1,2 @@
-﻿  glad.c
-  Texture.cpp
-  main.cpp
-  MyTexture.cpp
-  MyTexture2.cpp
-  Shader.cpp
-  stb_image.cpp
-  MyTexture3.cpp
-  MyTrans.cpp
-  Triangle.cpp
-  Triangle1.cpp
-  TriangleTime.cpp
-  MyShaderVO.cpp
-  正在生成代码...
+﻿  MyCube.cpp
   OpenGL.vcxproj -> D:\C++\OpenGL\x64\Debug\OpenGL.exe

@@ -108,12 +108,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -155,6 +159,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\modules\cube\MyCube.cpp" />
     <ClCompile Include="src\core\glad.c" />
     <ClCompile Include="src\core\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -166,10 +171,11 @@
     <ClCompile Include="src\modules\trans\MyTrans.cpp" />
     <ClCompile Include="src\modules\triangle\Triangle.cpp" />
     <ClCompile Include="src\modules\triangle\Triangle1.cpp" />
-    <ClCompile Include="src\modules\triangle\TriangleTime.cpp" />
     <ClCompile Include="src\core\MyShaderVO.cpp" />
+    <ClCompile Include="src\utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\modules\cube\MyCube.h" />
     <ClInclude Include="src\core\Command.h" />
     <ClInclude Include="src\core\include.h" />
     <ClInclude Include="src\core\Texture.h" />
@@ -181,8 +187,8 @@
     <ClInclude Include="src\modules\trans\MyTrans.h" />
     <ClInclude Include="src\modules\triangle\Triangle.h" />
     <ClInclude Include="src\modules\triangle\Triangle1.h" />
-    <ClInclude Include="src\modules\triangle\TriangleTime.h" />
     <ClInclude Include="src\core\MyShaderVO.h" />
+    <ClInclude Include="src\utils\Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OpenGL.rc" />

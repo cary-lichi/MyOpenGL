@@ -14,7 +14,6 @@ public:
 private:
 	int width, height, nrChannels;
 	Texture textureBg, textureFace;
-	unsigned int VBO, VAO, EBO;
 	MyShaderVO VO;
 	Shader shader;
 };

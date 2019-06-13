@@ -42,9 +42,6 @@
     <ClCompile Include="src\modules\triangle\Triangle1.cpp">
       <Filter>源文件\三角形</Filter>
     </ClCompile>
-    <ClCompile Include="src\modules\triangle\TriangleTime.cpp">
-      <Filter>源文件\三角形</Filter>
-    </ClCompile>
     <ClCompile Include="src\modules\texture\MyTexture.cpp">
       <Filter>源文件\纹理</Filter>
     </ClCompile>
@@ -72,6 +69,12 @@
     <ClCompile Include="src\core\MyShaderVO.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\modules\cube\MyCube.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\Utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -92,9 +95,6 @@
     <ClInclude Include="src\modules\triangle\Triangle1.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\modules\triangle\TriangleTime.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="src\modules\texture\MyTexture.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -111,6 +111,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\core\MyShaderVO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\cube\MyCube.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\Utils.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

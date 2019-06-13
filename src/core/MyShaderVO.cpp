@@ -1,6 +1,5 @@
 #include "MyShaderVO.h"
 
-
 MyShaderVO::MyShaderVO(const float * vertices, const unsigned long long vsize) {
 	isUseEBO = false;
 	createVAO();

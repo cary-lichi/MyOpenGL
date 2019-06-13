@@ -1,5 +1,6 @@
 #pragma once
-#include "include.h"
+#include <glad/glad.h>
+
 class MyShaderVO
 {
 public:
