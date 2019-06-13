@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\glad.c" />
+    <ClCompile Include="src\core\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\modules\texture\MyTexture.cpp" />
     <ClCompile Include="src\modules\texture\MyTexture2.cpp" />
@@ -166,10 +167,12 @@
     <ClCompile Include="src\modules\triangle\Triangle.cpp" />
     <ClCompile Include="src\modules\triangle\Triangle1.cpp" />
     <ClCompile Include="src\modules\triangle\TriangleTime.cpp" />
+    <ClCompile Include="src\core\MyShaderVO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\Command.h" />
     <ClInclude Include="src\core\include.h" />
+    <ClInclude Include="src\core\Texture.h" />
     <ClInclude Include="src\modules\texture\MyTexture.h" />
     <ClInclude Include="src\modules\texture\MyTexture2.h" />
     <ClInclude Include="resource.h" />
@@ -179,6 +182,7 @@
     <ClInclude Include="src\modules\triangle\Triangle.h" />
     <ClInclude Include="src\modules\triangle\Triangle1.h" />
     <ClInclude Include="src\modules\triangle\TriangleTime.h" />
+    <ClInclude Include="src\core\MyShaderVO.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OpenGL.rc" />

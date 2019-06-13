@@ -13,8 +13,9 @@ public:
 	void exit();
 private:
 	int width, height, nrChannels;
-	unsigned int textureBg, textureFace;
+	Texture textureBg, textureFace;
 	unsigned int VBO, VAO, EBO;
+	MyShaderVO VO;
 	Shader shader;
 };
 
