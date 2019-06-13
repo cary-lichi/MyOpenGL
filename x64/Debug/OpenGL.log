@@ -1,5 +1,4 @@
-﻿  main.cpp
-  MyTexture.cpp
-  Triangle1.cpp
-  正在生成代码...
+﻿  MyWord.cpp
+D:\C++\OpenGL\src\modules\word\MyWord.cpp(97,27): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\MyWord.cpp(98,14): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
   OpenGL.vcxproj -> D:\C++\OpenGL\x64\Debug\OpenGL.exe

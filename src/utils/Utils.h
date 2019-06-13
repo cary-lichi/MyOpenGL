@@ -5,5 +5,6 @@ class Utils
 {
 public:
 	static MyShaderVO createSquareVO();
+	static MyShaderVO createCubeVO();
 };
 

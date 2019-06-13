@@ -29,6 +29,7 @@ public:
 	virtual void init() {};
 	virtual	void render() {};
 	virtual void exit() {};
+	virtual void processInput(GLFWwindow* window) {};
 };
 
  

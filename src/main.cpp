@@ -7,6 +7,7 @@
 #include "modules/trans/MyTrans.h"
 #include "modules/cube/MyCube.h"
 #include "modules/plane/MyPlane.h"
+#include "modules/word/MyWord.h"
 
 Command* command;
 int input=3;
@@ -23,6 +24,7 @@ void showPptions() {
 	std::cout << "6：旋转缩放变换" << std::endl;
 	std::cout << "7：平面" << std::endl;
 	std::cout << "8：正方体" << std::endl;
+	std::cout << "9：3D世界" << std::endl;
 	std::cout << "0：关闭程序" << std::endl;
 }
 void init() {
@@ -50,6 +52,9 @@ void init() {
 			break;
 		case 8:
 			command = new MyCube();
+			break;
+		case 9:
+			command = new MyWord();
 			break;
 	}
 	command->init();
@@ -140,6 +145,7 @@ int createWindw() {
 
 void processInput(GLFWwindow* window)
 {
+	command->processInput(window);
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 }

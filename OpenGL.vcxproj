@@ -173,6 +173,7 @@
     <ClCompile Include="src\modules\triangle\Triangle.cpp" />
     <ClCompile Include="src\modules\triangle\Triangle1.cpp" />
     <ClCompile Include="src\core\MyShaderVO.cpp" />
+    <ClCompile Include="src\modules\word\MyWord.cpp" />
     <ClCompile Include="src\utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +191,7 @@
     <ClInclude Include="src\modules\triangle\Triangle.h" />
     <ClInclude Include="src\modules\triangle\Triangle1.h" />
     <ClInclude Include="src\core\MyShaderVO.h" />
+    <ClInclude Include="src\modules\word\MyWord.h" />
     <ClInclude Include="src\utils\Utils.h" />
   </ItemGroup>
   <ItemGroup>
