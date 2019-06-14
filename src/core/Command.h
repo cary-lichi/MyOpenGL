@@ -13,11 +13,8 @@
 #include "Shader.h"
 #include "Texture.h"
 #include "../utils/Utils.h"
+#include "Global.h"
 
-// settings
-//ÆÁÄ»´óÐ¡
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
 
 class Command
 {
@@ -30,6 +27,7 @@ public:
 	virtual	void render() {};
 	virtual void exit() {};
 	virtual void processInput(GLFWwindow* window) {};
+	virtual void mouseMove(GLFWwindow* window, double xpos, double ypos) {};
 };
 
  

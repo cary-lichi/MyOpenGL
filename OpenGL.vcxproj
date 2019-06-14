@@ -173,14 +173,14 @@
     <ClCompile Include="src\modules\triangle\Triangle.cpp" />
     <ClCompile Include="src\modules\triangle\Triangle1.cpp" />
     <ClCompile Include="src\core\MyShaderVO.cpp" />
-    <ClCompile Include="src\modules\word\MyWord.cpp" />
     <ClCompile Include="src\utils\Utils.cpp" />
+    <ClCompile Include="src\modules\word\Word.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Global.h" />
     <ClInclude Include="src\modules\plane\MyPlane.h" />
     <ClInclude Include="src\modules\cube\MyCube.h" />
     <ClInclude Include="src\core\Command.h" />
-    <ClInclude Include="src\core\include.h" />
     <ClInclude Include="src\core\Texture.h" />
     <ClInclude Include="src\modules\texture\MyTexture.h" />
     <ClInclude Include="src\modules\texture\MyTexture2.h" />
@@ -191,7 +191,7 @@
     <ClInclude Include="src\modules\triangle\Triangle.h" />
     <ClInclude Include="src\modules\triangle\Triangle1.h" />
     <ClInclude Include="src\core\MyShaderVO.h" />
-    <ClInclude Include="src\modules\word\MyWord.h" />
+    <ClInclude Include="src\modules\word\Word.h" />
     <ClInclude Include="src\utils\Utils.h" />
   </ItemGroup>
   <ItemGroup>

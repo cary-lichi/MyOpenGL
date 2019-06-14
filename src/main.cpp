@@ -1,4 +1,4 @@
-#include "core/Command.h"
+
 #include "modules/triangle/Triangle.h"
 #include "modules/triangle/Triangle1.h"
 #include "modules/texture/MyTexture.h"
@@ -7,12 +7,7 @@
 #include "modules/trans/MyTrans.h"
 #include "modules/cube/MyCube.h"
 #include "modules/plane/MyPlane.h"
-#include "modules/word/MyWord.h"
-
-Command* command;
-int input=3;
-//bool DEBUG = true;
-bool DEBUG = false;
+#include "modules/word/Word.h"
 
 void showPptions() {
 	std::cout << "请输入你的选项" << std::endl;
@@ -27,6 +22,16 @@ void showPptions() {
 	std::cout << "9：3D世界" << std::endl;
 	std::cout << "0：关闭程序" << std::endl;
 }
+
+GLFWwindow* window;
+
+//当前命令
+Command* command;
+
+int input = 3;
+//bool DEBUG = true;
+bool DEBUG = false;
+
 void init() {
 	switch (input) {
 		case 1:
@@ -54,7 +59,7 @@ void init() {
 			command = new MyCube();
 			break;
 		case 9:
-			command = new MyWord();
+			command = new Word();
 			break;
 	}
 	command->init();
@@ -72,6 +77,8 @@ void exit() {
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //输入
 void processInput(GLFWwindow* window);
+//鼠标
+void mouseMove(GLFWwindow* window, double xpos, double ypos);
 int createWindw();
 
 bool isClose;
@@ -105,7 +112,7 @@ int createWindw() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	//创建一个GLFW窗口
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OpenGL", NULL, NULL);
+	window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OpenGL", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "创建glfw窗口失败" << std::endl;
@@ -116,6 +123,8 @@ int createWindw() {
 	glfwMakeContextCurrent(window);
 	//窗口大小改变时执行framebuffer_size_callback
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	//鼠标输入
+	glfwSetCursorPosCallback(window, mouseMove);
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "加载失败" << std::endl;
@@ -148,6 +157,10 @@ void processInput(GLFWwindow* window)
 	command->processInput(window);
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+}
+
+void mouseMove(GLFWwindow* window, double xpos, double ypos) {
+	command->mouseMove(window,  xpos,  ypos);
 }
 
 void framebuffer_size_callback(GLFWwindow * window, int width, int height)

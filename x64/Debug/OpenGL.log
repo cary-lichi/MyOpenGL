@@ -1,4 +1,33 @@
-﻿  MyWord.cpp
-D:\C++\OpenGL\src\modules\word\MyWord.cpp(97,27): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\C++\OpenGL\src\modules\word\MyWord.cpp(98,14): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+﻿  Word.cpp
+D:\C++\OpenGL\src\modules\word\Word.cpp(57,35): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(57,35): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(57,35): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(57,35): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(57,35): warning C4244:         ]
+D:\C++\OpenGL\src\modules\word\Word.cpp(58,15): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(58,15): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(58,15): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(58,15): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(58,15): warning C4244:         ]
+D:\C++\OpenGL\src\modules\word\Word.cpp(59,35): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(59,35): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(59,35): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(59,35): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(59,35): warning C4244:         ]
+D:\C++\OpenGL\src\modules\word\Word.cpp(104,21): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(147,35): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(147,35): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(147,35): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(147,35): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(147,35): warning C4244:         ]
+D:\C++\OpenGL\src\modules\word\Word.cpp(148,15): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(148,15): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(148,15): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(148,15): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(148,15): warning C4244:         ]
+D:\C++\OpenGL\src\modules\word\Word.cpp(149,35): warning C4244:  “=”: 从“double”转换到“T”，可能丢失数据
+D:\C++\OpenGL\src\modules\word\Word.cpp(149,35): warning C4244:         with
+D:\C++\OpenGL\src\modules\word\Word.cpp(149,35): warning C4244:         [
+D:\C++\OpenGL\src\modules\word\Word.cpp(149,35): warning C4244:             T=float
+D:\C++\OpenGL\src\modules\word\Word.cpp(149,35): warning C4244:         ]
   OpenGL.vcxproj -> D:\C++\OpenGL\x64\Debug\OpenGL.exe

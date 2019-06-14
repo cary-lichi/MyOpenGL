@@ -78,7 +78,7 @@
     <ClCompile Include="src\modules\plane\MyPlane.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\modules\word\MyWord.cpp">
+    <ClCompile Include="src\modules\word\Word.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,9 +90,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\core\Shader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\include.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\modules\triangle\Triangle.h">
@@ -128,7 +125,10 @@
     <ClInclude Include="src\modules\plane\MyPlane.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\modules\word\MyWord.h">
+    <ClInclude Include="src\core\Global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\word\Word.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
