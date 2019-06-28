@@ -184,7 +184,6 @@
     <ClInclude Include="src\core\Texture.h" />
     <ClInclude Include="src\modules\texture\MyTexture.h" />
     <ClInclude Include="src\modules\texture\MyTexture2.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="src\core\Shader.h" />
     <ClInclude Include="src\modules\texture\MyTexture3.h" />
     <ClInclude Include="src\modules\trans\MyTrans.h" />
@@ -193,9 +192,6 @@
     <ClInclude Include="src\core\MyShaderVO.h" />
     <ClInclude Include="src\modules\word\Word.h" />
     <ClInclude Include="src\utils\Utils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="OpenGL.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
