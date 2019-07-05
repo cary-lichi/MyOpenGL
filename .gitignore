@@ -34,3 +34,5 @@
 /x64/Debug/OpenGL.tlog
 /packages
 /x64
+/OpenGL.vcxproj.user
+/packages.config
