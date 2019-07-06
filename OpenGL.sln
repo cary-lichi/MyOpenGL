@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Light", "Light\Light.vcxproj", "{64A985FC-3E3E-489D-834C-3E4DA48883C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leran", "Leran\Leran.vcxproj", "{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGL", "OpenGL.vcxproj", "{CF944BFC-4239-4C75-A963-DCD1A9084E00}"
 EndProject
 Global
@@ -13,6 +17,22 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Debug|x64.ActiveCfg = Debug|x64
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Debug|x64.Build.0 = Debug|x64
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Debug|x86.ActiveCfg = Debug|Win32
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Debug|x86.Build.0 = Debug|Win32
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Release|x64.ActiveCfg = Release|x64
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Release|x64.Build.0 = Release|x64
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Release|x86.ActiveCfg = Release|Win32
+		{64A985FC-3E3E-489D-834C-3E4DA48883C7}.Release|x86.Build.0 = Release|Win32
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Debug|x64.ActiveCfg = Debug|x64
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Debug|x64.Build.0 = Debug|x64
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Debug|x86.ActiveCfg = Debug|Win32
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Debug|x86.Build.0 = Debug|Win32
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Release|x64.ActiveCfg = Release|x64
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Release|x64.Build.0 = Release|x64
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Release|x86.ActiveCfg = Release|Win32
+		{988EF66B-6908-4EEA-BB2A-1A4672EFEDA0}.Release|x86.Build.0 = Release|Win32
 		{CF944BFC-4239-4C75-A963-DCD1A9084E00}.Debug|x64.ActiveCfg = Debug|x64
 		{CF944BFC-4239-4C75-A963-DCD1A9084E00}.Debug|x64.Build.0 = Debug|x64
 		{CF944BFC-4239-4C75-A963-DCD1A9084E00}.Debug|x86.ActiveCfg = Debug|Win32

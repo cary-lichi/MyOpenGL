@@ -12,7 +12,7 @@ MyTexture::~MyTexture()
 void MyTexture::init()
 {
 	//加载图片
-	unsigned char* data = stbi_load("resources/textures/container.jpg", &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load("../resources/textures/container.jpg", &width, &height, &nrChannels, 0);
 	//创建纹理
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);

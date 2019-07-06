@@ -6,7 +6,6 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <string>
 #include <glm/glm.hpp>
 using namespace std;
 
