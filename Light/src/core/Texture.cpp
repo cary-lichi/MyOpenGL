@@ -3,9 +3,11 @@
 Texture::Texture() {
 
 }
-Texture::Texture(const char* url) {
+Texture::Texture(string url) {
+
+	string filename = "../resources/" + url;
 	//加载图片
-	unsigned char* data = stbi_load(url, &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrChannels, 0);
 	//创建纹理
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);
@@ -22,11 +24,11 @@ Texture::Texture(const char* url) {
 		else if (nrChannels == 4) {//rgba 适用于png图像
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 		}
-		
+
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else {
-		std::cout<<"图片：“" << url<<"”加载失败" << std::endl;
+		std::cout << "图片：“" << filename << "”加载失败" << std::endl;
 	}
 	//释放资源
 	stbi_image_free(data);

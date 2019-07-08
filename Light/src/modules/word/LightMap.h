@@ -4,19 +4,19 @@
 #include "../../core/Material.h";
 #include "../../core/Light.h";
 
-class Word :
+class LightMap :
 	public Command
 {
 public:
-	Word();
-	~Word();
+	LightMap();
+	~LightMap();
 	void init();
 	void render();
 	void exit();
 	void processInput(GLFWwindow* window);
 	void mouseMove(GLFWwindow* window, double xpos, double ypos);
 private:
-	Texture textureBg, textureFace;
+	Texture textureDiffuse, textureSpecular, textureEmission;
 	MyShaderVO VO;
 	MyShaderVO lightVAO;
 	Shader shader;
@@ -36,7 +36,7 @@ private:
 	//上一帧鼠标位置
 	double lastX;
 	double lastY;
-	
+
 	/*------------光的参数--------------------*/
 	//glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 1.0f);//光源颜色
 	//glm::vec3 lightPos = glm::vec3(1.2f, 1.0f, 1.0f);//光源位置

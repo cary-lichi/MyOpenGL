@@ -19,6 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\modules\word\LightMap.h" />
+    <ClInclude Include="src\core\Light.h" />
+    <ClInclude Include="src\core\Material.h" />
     <ClInclude Include="src\core\Command.h" />
     <ClInclude Include="src\core\Global.h" />
     <ClInclude Include="src\core\MyShaderVO.h" />
@@ -34,6 +37,7 @@
     <ClCompile Include="src\core\stb_image.cpp" />
     <ClCompile Include="src\core\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\modules\word\LightMap.cpp" />
     <ClCompile Include="src\modules\word\Word.cpp" />
     <ClCompile Include="src\utils\Utils.cpp" />
   </ItemGroup>

@@ -1,10 +1,12 @@
 
 
 #include "modules/word/Word.h"
+#include "modules/word/LightMap.h"
 
 void showPptions() {
 	std::cout << "请输入你的选项" << std::endl;
 	std::cout << "1：世界" << std::endl;
+	std::cout << "2：光照贴图" << std::endl;
 	std::cout << "0：退出" << std::endl;
 
 }
@@ -22,6 +24,9 @@ void init() {
 	switch (input) {
 		case 1:
 			command = new Word();
+			break;
+		case 2:
+			command = new LightMap();
 			break;
 	}
 	command->init();

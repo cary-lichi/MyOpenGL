@@ -68,7 +68,7 @@ void Shader::CreateShader(string vertexPath, string fragmentPath) {
 	if (!success)
 	{
 		glGetShaderInfoLog(fragment, 512, NULL, infoLog);
-		std::cout << "Shader编译失败，有语法错误\n" << infoLog << std::endl;
+		std::cout << fragmentPath << "编译失败，有语法错误\n" << infoLog << std::endl;
 	};
 
 	// 着色器程序
@@ -81,7 +81,7 @@ void Shader::CreateShader(string vertexPath, string fragmentPath) {
 	if (!success)
 	{
 		glGetProgramInfoLog(ID, 512, NULL, infoLog);
-		std::cout << "Shader链接失败，有语法错误\n" << infoLog << std::endl;
+		std::cout << fragmentPath << "链接失败，有语法错误\n" << infoLog << std::endl;
 	}
 
 	// 删除着色器，它们已经链接到我们的程序中了，已经不再需要了
